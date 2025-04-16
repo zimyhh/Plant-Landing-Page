@@ -1,0 +1,286 @@
+@font-face {
+    font-family: 'Chillax';
+    src: url('../work/fonts/ChillaxVariable-Bold.woff2') format('woff2'),
+         url('../work/fonts/ChillaxVariable-Bold.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Chillax';
+    src: url('../work/fonts/ChillaxVariable-Bold.woff2') format('woff2'),
+         url('../work/fonts/ChillaxVariable-Bold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+:root {
+    --green-dark: #2e7d32;
+    --green-light: #00912e;
+    --green-mid: #b2dfdb;
+    --yellow-light: #fff9c4;
+    --gray-dark: #263238;
+    --gray-light: #f6f6f6;
+    --accent: #00796b;
+    --white: #ffffff;
+    --white-green: #004F44   
+  }
+  
+  body {
+
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    font-family: 'Inter', sans-serif;
+    color: var(--gray-dark);
+    background-color: var(--gray-light);
+}
+.hero-buttons .link {
+    display: inline-block;
+    color: var(--gray-light); /* Цвет текста ссылок */
+    font-size: 1.2rem; /* Увеличенный размер текста */
+    font-weight: bold;
+    text-decoration: none; /* Убираем подчеркивание */
+    margin-right: 1rem; /* Отступ между ссылками */
+    transition: color 0.3s, transform 0.2s;
+}
+
+.hero-buttons .link:hover {
+    color: var(--green-light); /* Светло-зеленый цвет при наведении */
+    transform: scale(1.05); /* Легкое увеличение при наведении */
+}
+
+/* Стили для кнопок */
+button {
+    background-color: var(--green-dark); 
+    color: #ffffff;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+ 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #004F44;
+    padding: 0 2rem;
+    height: 100px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin: 0;
+}
+
+.nav-logo {
+    flex-grow: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo {
+    max-width: 200px;
+    height: auto;
+}
+
+.nav-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    margin-left: 1rem;
+}
+
+.nav-icons i {
+    width: 20px;
+    height: 20px;
+    color: var(--gray-light);
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.nav-icons i:hover {
+    color: var(--green-light);
+}
+
+.hero {
+    display: flex; /* Выравниваем элементы в строку */
+    align-items: center; /* Центрируем элементы по вертикали */
+    justify-content: space-between; /* Распределяем текст и кнопки */
+    height: 100vh; /* Высота секции */
+    padding: 0 2rem; /* Горизонтальные отступы */
+    box-sizing: border-box; /* Учитываем отступы в размерах */
+    background-color: #004F44;
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    margin: 0; /* Убираем внешние отступы */
+    padding: 0; /* Убираем внутренние отступы */
+}
+
+.hero-content {
+    display: flex; /* Выравниваем элементы в колонку */
+    flex-direction: column; /* Располагаем элементы вертикально */
+    align-items: flex-start; /* Выравниваем элементы по левому краю */
+    padding: 0 200px; /* Отступы слева и справа */
+    text-align: left; /* Выравнивание текста по левому краю */
+    gap: 1.5rem; /* Расстояние между элементами */
+}
+
+.hero-content h1 {
+    font-family: 'Chillax', sans-serif; /* Применяем локальный шрифт Chillax */
+    font-size: 3rem; /* Размер текста */
+    font-weight: 600; /* Жирный стиль */
+    color: var(--white); /* Белый цвет текста */
+    margin: 0; /* Убираем внешние отступы */
+}
+
+.hero-content h2 {
+    font-size: 1.5rem; /* Размер текста */
+    font-weight: 400; /* Тонкий стиль */
+    color: var(--gray-light); /* Светло-серый цвет текста */
+    line-height: 1.6; /* Межстрочное расстояние */
+    margin: 0; /* Убираем внешние отступы */
+}
+
+.hero-content p {
+    font-size: 1.2rem; /* Размер текста */
+    font-weight: 400; /* Тонкий стиль */
+    color: var(--gray-light); /* Светло-серый цвет текста */
+    line-height: 1.6; /* Межстрочное расстояние */
+    margin: 0; /* Убираем внешние отступы */
+}
+
+/* Сделать hero-buttons горизонтальным */
+.hero-buttons {
+    display: flex; /* Располагаем кнопки в строку */
+    gap: 1rem; /* Расстояние между кнопками */
+    justify-content: flex-start; /* Выравнивание кнопок по левому краю */
+    align-items: center; /* Центрируем кнопки по вертикали */
+}
+
+/* Сделать кнопки ярко-зелеными */
+button.primary {
+    background-color: var(--white); /* Белый фон */
+    color: var(--gray-dark); /* Чёрный текст */
+    border: none; /* Убираем рамку */
+    padding: 1.2rem 2.25rem; /* Увеличенные отступы для большего размера */
+    font-size: 1.5rem; /* Увеличенный размер текста */
+    font-weight: bold; /* Жирный текст */
+    border-radius: 0; /* Убираем закругления */
+    cursor: pointer; /* Указатель мыши */
+    position: relative; /* Для позиционирования текста */
+    transition: background-color 0.3s, color 0.3s, transform 0.2s; /* Анимация */
+}
+
+button.primary:hover {
+    background-color: var(--gray-dark); /* Чёрный фон при наведении */
+    color: var(--white); /* Белый текст при наведении */
+    transform: scale(1.05); /* Лёгкое увеличение при наведении */
+}
+
+button.secondary {
+    background-color: var(--white-green); /* Белый фон */
+    color: var(--gray-light); /* Серый текст */
+    border: none; /* Убираем рамку */
+    padding: 1.2rem 2.25rem; /* Увеличенные отступы для большего размера */
+    font-size: 1.5rem; /* Увеличенный размер текста */
+    font-weight: bold; /* Жирный текст */
+    border-radius: 0; /* Убираем закругления */
+    cursor: pointer; /* Указатель мыши */
+    position: relative; /* Для позиционирования стрелки */
+    transition: background-color 0.3s, color 0.3s, transform 0.2s; /* Анимация */
+    margin-left: 0; /* Убираем автоматический сдвиг вправо */
+}
+
+button.secondary:hover {
+    background-color: var(--gray-dark); /* Чёрный фон при наведении */
+    color: var(--white); /* Белый текст при наведении */
+    transform: scale(1.05); /* Лёгкое увеличение при наведении */
+}
+
+/* Добавляем стрелочку справа */
+button.secondary::after {
+    content: ''; /* Пустой контент для стрелки */
+    position: absolute;
+    right: -50px; /* Расположение стрелки справа от кнопки */
+    top: 50%; /* Центрируем стрелку по вертикали */
+    transform: translateY(-50%) rotate(45deg); /* Поворачиваем стрелку направо */
+    width: 33.75px; /* Ширина стрелки (увеличена в 1.5 раза от 22.5px) */
+    height: 33.75px; /* Высота стрелки (увеличена в 1.5 раза от 22.5px) */
+    border-right: 4.5px solid var(--gray-dark); /* Правая линия стрелки */
+    border-top: 4.5px solid var(--gray-dark); /* Верхняя линия стрелки */
+    opacity: 0; /* Скрываем стрелку по умолчанию */
+    transition: opacity 0.3s, transform 0.3s; /* Анимация появления */
+}
+
+button.secondary:hover::after {
+    opacity: 1; /* Показываем стрелку при наведении */
+    transform: translateY(-50%) translateX(0) rotate(45deg); /* Двигаем стрелку вправо */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Увеличиваем размеры кнопок в выпадающем меню */
+.dropdown-link {
+    display: block; /* Каждая кнопка занимает свою строку */
+    color: #000000; /* Белый текст */
+    background-color: var(--green-dark); /* Основной зеленый цвет */
+    padding: 1rem 1.75rem; /* Увеличиваем отступы */
+    font-size: 1.1rem; /* Увеличиваем размер текста */
+    font-weight: bold; /* Жирный текст */
+    text-decoration: none; /* Убираем подчеркивание */
+    border-radius: 8px; /* Округлые края */
+    margin-bottom: 0.75rem; /* Увеличиваем отступ между кнопками */
+    transition: background-color 0.3s, transform 0.2s; /* Анимация */
+}
+
+.dropdown-link:hover {
+    background-color: var(--green-light); /* Светло-зеленый цвет при наведении */
+    transform: scale(1.1); /* Увеличение при наведении */
+}
+
+/* Увеличиваем размеры выпадающего меню */
+.dropdown-menu {
+    width: 250px; /* Ширина меню */
+    padding: 1.5rem; /* Внутренние отступы */
+    display: none; /* Скрываем меню по умолчанию */
+    opacity: 0; /* Прозрачность 0 по умолчанию */
+    transition: opacity 0.4s ease; /* Плавная анимация изменения прозрачности */
+    position: absolute; /* Абсолютное позиционирование */
+    background-color: var(--gray-light); /* Серый фон меню */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для меню */
+    border-radius: 8px; /* Закругленные углы */
+    z-index: 100; /* Поверх других элементов */
+}
+
+/* Стили для кнопок внутри меню */
+.dropdown-menu a {
+    display: block; /* Каждый элемент меню в новой строке */
+    color: var(--gray-light); /* Чёрный текст */
+    background-color: var(--white-green); /* Цвет основного фона для блоков */
+    text-decoration: none; /* Убираем подчеркивание */
+    padding: 0.75rem 1rem; /* Увеличиваем отступы */
+    font-size: 1.1rem; /* Увеличиваем размер текста */
+    font-weight: bold; /* Жирный текст */
+    border-radius: 8px; /* Закругленные углы */
+    margin-bottom: 0.75rem; /* Отступ между кнопками */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Анимация */
+}
+
+/* Стили при наведении на кнопки */
+.dropdown-menu a:hover {
+    background-color: var(--green-light); /* Светло-зелёный фон при наведении */
+    color: var(--gray-light); /* Чёрный текст остаётся */
+    transform: scale(1.05); /* Лёгкое увеличение при наведении */
+}

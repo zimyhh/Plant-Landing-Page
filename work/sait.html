@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plant Landing Page</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Chillax:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="hero-buttons">
+            <a href="#shop" class="link">Shop</a>
+            <div class="dropdown">
+                <a href="#products" class="link">Products</a>
+                <div class="dropdown-menu"></div>
+            </div>
+            <a href="#fertilizer" class="link">Fertilizer</a>
+            <a href="#guide" class="link">Guide</a>
+        </div>
+        <div class="nav-logo">
+            <img src="Image/logo.png" alt="Platify Logo" class="logo">
+        </div>
+        <div class="nav-icons">
+            <a href="#search"><i data-lucide="search"></i></a>
+            <a href="#user"><i data-lucide="user"></i></a>
+            <a href="#cart"><i data-lucide="shopping-cart"></i></a>
+        </div>
+    </nav>
+    <header class="hero" id="hero">
+        <div class="hero-content">
+            <h1>Happiness <br>blooms from <br>within</h1>
+            <h2>Our environment, the world in which we live and work, <br>is a mirror of our attitudes and expectations.</h2>
+            <div class="hero-buttons">
+                <button class="primary">Shop now</button>
+                <button class="secondary">Explore plants</button>
+            </div>
+        </div>
+    </header>
+    <footer id="footer">
+        <p>Free Shipping Services <br />*only for the same region</p>
+        <p>+62 1189-2719-00</p>
+        <p>order@platify.co</p>
+    </footer>
+      <script src="style.js" defer></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>
