@@ -69,6 +69,27 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // Карточки продуктов для секции Featured (без стрелок и View All)
+    const featuredList = document.getElementById("featuredList");
+    if (featuredList) {
+        const products = [
+            { name: "Peony", price: "$19.99" },
+            { name: "Tulip", price: "$24.99" },
+            { name: "Rose", price: "$14.99" },
+            { name: "Lily", price: "$29.99" }
+        ];
+        products.forEach((product) => {
+            const card = document.createElement("div");
+            card.className = "featured-card";
+            card.innerHTML = `
+                <img src="Image/1picture.png" alt="${product.name}" style="width:100%;height:60%;object-fit:cover;display:block;border-radius:0;">
+                <div class="featured-card-title" style="font-size:1rem;margin:0.5rem 0 0.5rem 0;">${product.name}</div>
+                <button class="primary" style="width:90%;margin-top:auto;">${product.price}</button>
+            `;
+            featuredList.appendChild(card);
+        });
+    }
+
     const burger = document.getElementById("burger");
     burger.addEventListener("click", () => {
         alert("Бургер кликнут!"); // пока только клик
@@ -86,9 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const navLogo = document.querySelector('.nav-logo');
         const searchTriggerRect = searchTrigger.getBoundingClientRect();
         const navLogoRect = navLogo.getBoundingClientRect();
-        // Левая граница логотипа минус левая граница searchTrigger
         let width = navLogoRect.left - searchTriggerRect.left;
-        // Если ширина слишком маленькая (например, на мобильных), fallback на 98vw
         if (width < 200) width = window.innerWidth * 0.98;
         return width + 'px';
     }
@@ -98,13 +117,14 @@ document.addEventListener("DOMContentLoaded", () => {
         if (searchPanel.classList.contains("active") || searchAnimating) return;
         searchAnimating = true;
         searchPanel.classList.add("active");
+        // Используем rem для согласованности с CSS
         searchBubble.style.transition = "none";
-        searchBubble.style.width = "40px";
-        searchBubble.style.borderRadius = "40px";
+        searchBubble.style.width = "2.5rem";
+        searchBubble.style.borderRadius = "2.5rem";
         searchBubble.offsetHeight; // reflow
         searchBubble.style.transition = "width 0.35s cubic-bezier(.7,0,.3,1), border-radius 0.35s cubic-bezier(.7,0,.3,1)";
         searchBubble.style.width = getSearchBubbleWidth();
-        searchBubble.style.borderRadius = "40px";
+        searchBubble.style.borderRadius = "2.5rem";
         setTimeout(() => {
             searchInput.focus();
             searchAnimating = false;
@@ -115,8 +135,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!searchPanel.classList.contains("active") || searchAnimating) return;
         searchAnimating = true;
         searchBubble.style.transition = "width 0.25s cubic-bezier(.7,0,.3,1), border-radius 0.25s cubic-bezier(.7,0,.3,1)";
-        searchBubble.style.width = "40px";
-        searchBubble.style.borderRadius = "40px";
+        searchBubble.style.width = "2.5rem";
+        searchBubble.style.borderRadius = "2.5rem";
         setTimeout(() => {
             searchPanel.classList.remove("active");
             searchAnimating = false;
